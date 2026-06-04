@@ -109,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!res.ok) throw new Error(`Formspree returned ${res.status}`);
       } catch (err) {
         console.error('Booking form submission failed:', err);
+        alert('Sorry, something went wrong. Please email us at hello@1on1aibuilder.com');
         return;
       }
       
@@ -153,6 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!res.ok) throw new Error(`Formspree returned ${res.status}`);
       } catch (err) {
         console.error('Contact form submission failed:', err);
+        alert('Sorry, something went wrong. Please email us at hello@1on1aibuilder.com');
         return;
       }
       
