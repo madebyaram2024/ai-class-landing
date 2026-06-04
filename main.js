@@ -93,13 +93,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 4. Form Submission Interceptor (Booking)
   if (bookingForm) {
-    bookingForm.addEventListener('submit', (event) => {
+    bookingForm.addEventListener('submit', async (event) => {
       event.preventDefault(); // stop browser reload
       
       const clientName = document.getElementById('form-name').value;
       const clientEmail = document.getElementById('form-email').value;
       
-      console.log(`Booking Request: Name=${clientName}, Email=${clientEmail}`);
+      // Submit to Formspree
+      try {
+        const res = await fetch(bookingForm.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(bookingForm)
+        });
+        if (!res.ok) throw new Error(`Formspree returned ${res.status}`);
+      } catch (err) {
+        console.error('Booking form submission failed:', err);
+        return;
+      }
       
       // Reset the form input fields
       bookingForm.reset();
@@ -114,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 5. Form Submission Interceptor (Contact)
   if (contactForm) {
-    contactForm.addEventListener('submit', (event) => {
+    contactForm.addEventListener('submit', async (event) => {
       event.preventDefault(); // stop browser reload
       
       // Validate that at least 2 days of the week are selected
@@ -132,16 +143,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const contactAiExp = document.getElementById('contact-ai-exp').value;
       const contactMessage = document.getElementById('contact-message').value;
       
-      console.log(`Contact Form Submitted:
-        Name: ${contactName}
-        Email: ${contactEmail}
-        Phone: ${contactPhone}
-        Preferred Contact: ${contactPreferred}
-        Computer Experience: ${contactCompExp}
-        AI Experience: ${contactAiExp}
-        Days Available: ${checkedDays.join(', ')}
-        Message: ${contactMessage}
-      `);
+      // Submit to Formspree
+      try {
+        const res = await fetch(contactForm.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(contactForm)
+        });
+        if (!res.ok) throw new Error(`Formspree returned ${res.status}`);
+      } catch (err) {
+        console.error('Contact form submission failed:', err);
+        return;
+      }
       
       // Reset the form input fields
       contactForm.reset();
