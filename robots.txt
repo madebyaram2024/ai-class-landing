@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap Location (Replace with your actual domain when launched)
+Sitemap: https://yourdomain.com/sitemap.xml

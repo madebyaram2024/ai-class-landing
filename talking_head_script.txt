@@ -1,0 +1,11 @@
+Have you ever wanted to build your own custom website, landing page, or online application, but got stuck because you don't know how to code? Or maybe you got quoted thousands of dollars by developers? It's time to change that.
+
+Welcome to the AI Builder Academy. We offer a private, live, one-on-one course designed specifically for absolute beginners. Over just four classes, we teach you how to leverage advanced AI models to write, design, and launch professional sites—even if your only technical skill is checking your email.
+
+Here is what we do step-by-step. In Class One, we learn to prompt models like Claude and ChatGPT to plan your site's structure. In Class Two, we make AI write clean, mobile-responsive HTML and CSS. In Class Three, we deploy your site to global servers for free and hook up your custom domain.
+
+But we don't stop there. In Class Four, we unlock the advanced stack. You’ll master professional tools like the Gemini CLI, Claude Code, Warp, Wave, and Antigravity. You will learn how to connect databases using APIs, structure local documents with Retrieval-Augmented Generation, and connect LLMs using Model Context Protocols.
+
+Best of all, you will learn to build your own autonomous custom agent. Using OpenClaw and Hermes Agent, you can create agents that draft and publish blog posts, write social updates, and upload YouTube videos completely on your behalf.
+
+The entire four-lesson program is only six hundred dollars, taught live online or from Glendale, California. No payment is required to sign up. Simply enter your name and email on our website to schedule a quick ten-minute consultation call, and let’s discuss your project. Claim your slot today!
